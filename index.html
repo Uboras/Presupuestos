@@ -11,8 +11,9 @@
             background-color: rgba(100, 168, 168, 90);
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             font-size: 14px;
-
+            text-align: justify;
         }
+
         body {
             background-color: #f2f2f2;
             font-family: Arial, sans-serif;
@@ -21,6 +22,7 @@
             margin: 16px auto;
             min-height: 90vh;
         }
+
         /*Membrete*/
         .membrete {
             margin: auto;
@@ -33,42 +35,52 @@
             align-items: center;
             background: linear-gradient(#dd9191b2 95%, black);
         }
+
         .membrete-name>h3 {
             margin: 2px;
 
         }
+
         .membrete-name>h5 {
 
             margin: 2px;
         }
+
         .empresa-info {
             text-align: right;
         }
+
         .empresa-info>p {
             margin: 1px;
         }
+
         /*Descripcion*
 
         /*Fotos*/
-        .imagenes{
+        .imagenes {
             display: flex;
             flex-wrap: wrap;
             width: 90%;
             justify-content: space-around;
             margin-top: 40px;
             margin-bottom: 40px;
+            gap: 20px;
         }
-        .imagenes >img{
+
+        .imagenes>img {
             border-radius: 8px;
             box-shadow: 2px 4px 8px black;
             display: flex;
             margin: 4px 8px;
             max-width: 40%;
+            transition: transform 1s ease-in-out
         }
-        .imagenes > img:hover{
-            
-            scale: 1.4;
+
+        .imagenes>img:hover {
+
+            transform: scale(1.2);
         }
+
         /*Presupuesto*/
         section {
             margin: 20px auto;
@@ -80,28 +92,34 @@
             border-collapse: collapse;
             margin-bottom: 20px;
         }
+
         /* section*/
         .table {
             min-width: 20%;
 
 
         }
+
         table,
         th,
         td {
             border: 1px solid #000;
         }
+
         th,
         td {
             padding: 8px;
             text-align: left;
         }
+
         th {
             background-color: #f2f2f2;
         }
+
         del {
             color: red;
         }
+
         #horasTrabajadas,
         #precio-hora,
         #precio-total {
@@ -113,6 +131,7 @@
             margin-left: 10px;
             font-size: 1.1em;
         }
+
         details {
             margin: 20px;
 
@@ -138,15 +157,17 @@
         .footer>* {
             margin: 3PX;
         }
+
         /*Divisor de secciones*/
         .divider {
             width: 100%;
-            
+
             height: 3px;
             background-color: #dd9191b2;
             border: 1px inherit black;
             margin: 60px 0;
         }
+
         .custom-divider {
             width: 50%;
             display: flex;
@@ -154,33 +175,47 @@
             text-align: center;
             margin: 20px auto;
         }
+
         .custom-divider::before,
         .custom-divider::after {
-            margin-top : 20px ;
+            margin-top: 20px;
             content: '';
             flex: 1;
             border-bottom: 2px solid #ccc;
         }
+
         .custom-divider:not(:empty)::before {
             margin-right: 1.25em;
         }
+
         .custom-divider:not(:empty)::after {
             margin-left: 1.25em;
         }
+
         @media screen and (max-width:768px) {
             html {
-
-                font-size: 12px;
-
+                font-size: 14px;
             }
-        }
+        
+
         body {
             max-width: 90%;
 
-            section {
-                width: 95%;
-            }
+            
         }
+        section {
+            width: 95%;
+        }
+        .imagenes{
+        margin: auto;
+        }
+        .imagenes >img{
+          max-width:100%;
+        }
+        .imagenes > img:hover{
+            transform: none;
+        }
+    }
     </style>
 </head>
 
@@ -200,42 +235,51 @@
             </div>
         </div>
     </section>
-    
+
     <!--Descripcion -->
     <section>
         <h1>Desarrollo de Base de Datos y Servidor de Reportes</h1>
-        <p>Estos reportes incluirán tanto el total de ventas como el estado del stock de mercaderías. El sistema está diseñado para ofrecer información precisa y en tiempo real, facilitando así la toma de decisiones empresariales informadas.</p>
-        
+        <p>Estos reportes incluirán tanto el total de ventas como el estado del stock de mercaderías. El sistema está
+            diseñado para ofrecer información precisa y en tiempo real, facilitando así la toma de decisiones
+            empresariales informadas.</p>
+
         <h2>Objetivos del Proyecto:</h2>
-        
+
         <h3>Diseño y Desarrollo de la Base de Datos:</h3>
         <ul>
-            <li>Crear una estructura de base de datos eficiente y escalable que almacene todos los datos relacionados con ventas y stock de mercaderías.</li>
-            <li>Asegurar la integridad y seguridad de los datos mediante la implementación de restricciones y reglas adecuadas.</li>
+            <li>Crear una estructura de base de datos eficiente y escalable que almacene todos los datos relacionados
+                con ventas y stock de mercaderías.</li>
+            <li>Asegurar la integridad y seguridad de los datos mediante la implementación de restricciones y reglas
+                adecuadas.</li>
         </ul>
-        
+
         <h3>Implementación del Servidor Backend:</h3>
         <ul>
-            <li>Desarrollar un servidor que proporcione una serie de endpoints RESTful para interactuar con la base de datos.</li>
-            <li>Los endpoints permitirán a los usuarios consultar datos específicos, generar reportes de ventas y verificar el stock de mercaderías.</li>
+            <li>Desarrollar un servidor que proporcione una serie de endpoints RESTful para interactuar con la base de
+                datos.</li>
+            <li>Los endpoints permitirán a los usuarios consultar datos específicos, generar reportes de ventas y
+                verificar el stock de mercaderías.</li>
             <li>Asegurar la autenticación y autorización adecuada para el acceso a los endpoints.</li>
         </ul>
-        
+
         <h3>Generación de Reportes:</h3>
         <ul>
-            <li>Crear funcionalidades que generen reportes detallados sobre el total de ventas en diferentes períodos de tiempo (diario, semanal, mensual, etc.).</li>
-            <li>Implementar reportes de stock de mercaderías que muestren las cantidades disponibles y los niveles de inventario en tiempo real.</li>
-            <li>Ofrecer la posibilidad de exportar los reportes en formatos  PDF para facilitar su análisis y presentación.</li>
+            <li>Crear funcionalidades que generen reportes detallados sobre el total de ventas en diferentes períodos de
+                tiempo (diario, semanal, mensual, etc.).</li>
+            <li>Implementar reportes de stock de mercaderías que muestren las cantidades disponibles y los niveles de
+                inventario en tiempo real.</li>
+            <li>Ofrecer la posibilidad de exportar los reportes en formatos PDF para facilitar su análisis y
+                presentación.</li>
         </ul>
     </section>
     <hr class="divider">
     <!--Fotos-->
     <section>
         <div class="imagenes">
-            <img src="./FotoGrafias/foto 1.bmp"/>
-            <img src="./FotoGrafias/foto 2.bmp"/>
-            <img src="./FotoGrafias/foto 3.bmp"/>
-            <img src="./FotoGrafias/foto 4.bmp"/>
+            <img src="./FotoGrafias/foto 1.bmp" />
+            <img src="./FotoGrafias/foto 2.bmp" />
+            <img src="./FotoGrafias/foto 3.bmp" />
+            <img src="./FotoGrafias/foto 4.bmp" />
         </div>
     </section>
     <hr class="divider">
@@ -243,9 +287,10 @@
     <section>
         <h2>1. Definir el Alcance del Proyecto</h2>
         <h3><i>Tiempo, Desarrollo y Detalle</i></h3>
-
+        <b><i>Menu desplegable</i></b>
         <details>
-            <summary class="summary-title"> <i> Backend: (Servidor Principal)</i></summary>
+            <summary class="summary-title"> <i> Backend:(Servidor Principal)</i></summary>
+            
             <details>
                 <summary><strong> Crear Los puntos de entrada al servidor (API).</strong></summary>
                 <h4> - Desarrollo de la API.</h4>
@@ -304,7 +349,7 @@
             <p><strong> - Pruebas de frontend y Backend</strong></p>
             <p><strong> - Integración con el backend</strong></p>
         </details>
-        
+
     </section>
     <hr class="divider">
     <!--Tabla de gastos-->
@@ -383,7 +428,7 @@
             <h5> <i> Frontend(Sucursales): JavaScript, React.js y más.. </i></h5>
         </div>
     </section>
-    
+
     <script>
         let precio = 5;
         let lista = document.querySelectorAll("#precio-hora")
